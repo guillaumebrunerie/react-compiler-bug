@@ -1,6 +1,6 @@
 import { useLayoutEffect, useRef, useState } from "react";
 
-export const useHover = () => {
+const useHover = () => {
   const [isHovered, setIsHovered] = useState(false);
   const onPointerEnter = () => {
     setIsHovered(true);
@@ -12,7 +12,7 @@ export const useHover = () => {
   return { isHovered, onPointerEnter, onPointerLeave };
 };
 
-export const useAlignToNode = (
+const useAlignToNode = (
   refContainer: { ref: React.RefObject<HTMLElement | null> },
   hoverRef: React.RefObject<HTMLElement | null>,
 ) => {
